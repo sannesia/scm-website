@@ -127,3 +127,9 @@
     transition-duration: var(--ifm-button-transition-duration);
     transition-timing-function: var(--ifm-transition-timing-default);
 }
+
+.tagLine {
+    display: block;
+    height: 2rem;
+    font-size: 1.5rem;
+}

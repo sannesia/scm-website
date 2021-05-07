@@ -13,8 +13,8 @@ module.exports = {
   tagline: '大交易连生态,供应链链全球',
   url: 'https://scm.springlearn.cn',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
   favicon: 'img/scm-website.png',
   organizationName: 'lxchinesszz', // Usually your GitHub org/user name.
   projectName: 'scm', // Usually your repo name.
@@ -140,7 +140,7 @@ module.exports = {
             'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [require.resolve('./src/css/custom.css')],
         },
       },
     ],

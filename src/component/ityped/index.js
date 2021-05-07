@@ -1,8 +1,16 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+[object Object]
+ */
 import React, {Component} from 'react';
-import {init} from 'ityped2';
+import {init} from '../../js/ityped';
 import styles from './styles.module.css'
 
-export default class ItypedLine extends Component {
+export default class ITypedLine extends Component {
 
   constructor(strs) {
     super();
@@ -26,6 +34,5 @@ export default class ItypedLine extends Component {
 
   render() {
     return <span id='myElement' className={styles.tagLine}></span>;
-
   }
 }

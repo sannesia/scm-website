@@ -14,8 +14,45 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-import pageConfig from './config/theme';
-import ItypedLine from '../component/ityped';
+import ITypedLine from '../component/ityped';
+
+const pageConfig = {
+  features: [
+    {
+      title: '业务体系',
+      imageUrl: 'img/undraw_docusaurus_mountain.svg',
+      description: '什么是供应链 ? 供应链全局体系是什么 ? B端C端又是什么 ?',
+    },
+    {
+      title: '系统架构',
+      imageUrl: 'img/undraw_docusaurus_tree.svg',
+      description: '如何根据业务体系构建技术架构,领域架构如何抽象。',
+    },
+  ],
+
+  bannerButtons: [
+    {
+      bannerTitle: '业务体系',
+      bannerUrl: '',
+      className: 'bannerButtonLeft',
+    },
+    {
+      bannerTitle: '系统设计',
+      bannerUrl: '',
+      className: 'bannerButtonRight',
+    },
+  ],
+
+  bannerImg: {
+    url: 'img/package-3.png',
+    bannerImgAlt: 'img/package-1.png',
+    className: 'bannerImg',
+  },
+
+  bannerTagLines: ['Supply chain system design !'],
+};
+
+
 
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
@@ -44,7 +81,7 @@ export default function Home() {
           <h1 className='hero__title'>{siteConfig.title}</h1>
           <p className={clsx('hero__subtitle', styles.bannerLeftP)}>
             {siteConfig.tagline}
-            <ItypedLine strs={pageConfig.bannerTagLines}></ItypedLine>
+            <ITypedLine strs={pageConfig.bannerTagLines} />
           </p>
           <div className={styles.buttonWrapper}>
             {pageConfig.bannerButtons.map(({bannerTitle, bannerUrl, className}) => (
