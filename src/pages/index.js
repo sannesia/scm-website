@@ -20,12 +20,12 @@ const pageConfig = {
   features: [
     {
       title: '业务体系',
-      imageUrl: 'img/undraw_docusaurus_mountain.svg',
+      imageUrl: 'img/package-1.png',
       description: '什么是供应链 ? 供应链全局体系是什么 ? B端C端又是什么 ?',
     },
     {
       title: '系统架构',
-      imageUrl: 'img/undraw_docusaurus_tree.svg',
+      imageUrl: 'img/transport-1.png',
       description: '如何根据业务体系构建技术架构,领域架构如何抽象。',
     },
   ],
@@ -44,7 +44,7 @@ const pageConfig = {
   ],
 
   bannerImg: {
-    url: 'img/package-3.png',
+    url: 'img/package-6.png',
     bannerImgAlt: 'img/package-1.png',
     className: 'bannerImg',
   },

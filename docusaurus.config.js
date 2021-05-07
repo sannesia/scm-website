@@ -49,33 +49,16 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Learn',
+          title: '友链',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Java技术栈',
+              href: 'https://java.springlearn.cn/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
+              label: '程序猿升级课',
+              href: 'https://blog.springlearn.cn/',
+            }
           ],
         },
         {
@@ -87,38 +70,16 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'Legal',
-          // Please do not remove the privacy and terms, it's a legal requirement.
-          items: [
-            {
-              label: 'Privacy',
-              href: 'https://opensource.facebook.com/legal/privacy/',
-            },
-            {
-              label: 'Terms',
-              href: 'https://opensource.facebook.com/legal/terms/',
-            },
-            {
-              label: 'Data Policy',
-              href: 'https://opensource.facebook.com/legal/data-policy/',
-            },
-            {
-              label: 'Cookie Policy',
-              href: 'https://opensource.facebook.com/legal/cookie-policy/',
+              href: 'https://github.com/lxchinesszz/scm-website',
             },
           ],
         },
       ],
-      logo: {
-        alt: '供应链系统架构设计',
-        src: 'img/scm-website.png?width=12px',
-        href: 'https://scm.springlearn.cn',
-      },
+      // logo: {
+      //   alt: '供应链系统架构设计',
+      //   src: 'img/scm-website.png?width=12px',
+      //   href: 'https://scm.springlearn.cn',
+      // },
       // Please do not remove the credits, help to publicize Docusaurus :)
       copyright: `Copyright © ${new Date().getFullYear()} SCM for liuxin, 豫ICP备18041471号`,
     },
