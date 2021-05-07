@@ -10,12 +10,12 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'SCM',
-  tagline: 'Supply chain system design',
+  tagline: '大交易连生态,供应链链全球',
   url: 'https://scm.springlearn.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/scm-website.png',
   organizationName: 'lxchinesszz', // Usually your GitHub org/user name.
   projectName: 'scm', // Usually your repo name.
   themeConfig: {
@@ -23,20 +23,24 @@ module.exports = {
       title: 'Supply Chain Manager',
       logo: {
         alt: 'My Facebook Project Logo',
-        src: 'img/logo.svg',
+        src: 'img/scm-website-white.png',
       },
       items: [
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: '业务体系',
           position: 'right',
         },
-        {to: 'blog', label: 'Blog', position: 'right'},
+        {to: 'blog', label: '系统架构', position: 'right'},
         // Please keep GitHub link to the right for consistency.
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          type: 'search',
           position: 'right',
         },
       ],
@@ -111,12 +115,12 @@ module.exports = {
         },
       ],
       logo: {
-        alt: 'Facebook Open Source Logo',
-        src: 'img/oss_logo.png',
-        href: 'https://opensource.facebook.com',
+        alt: '供应链系统架构设计',
+        src: 'img/scm-website.png?width=12px',
+        href: 'https://scm.springlearn.cn',
       },
       // Please do not remove the credits, help to publicize Docusaurus :)
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SCM for liuxin, 豫ICP备18041471号`,
     },
   },
   presets: [

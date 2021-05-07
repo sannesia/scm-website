@@ -14,46 +14,15 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-
-const features = [
-  {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
+import pageConfig from './config/theme';
+import ItypedLine from '../component/ityped';
 
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx('col col--4', styles.feature)}>
+    <div className={clsx('col col--6', styles.features)}>
       {imgUrl && (
-        <div className="text--center">
+        <div className='text--center'>
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
@@ -68,30 +37,44 @@ export default function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <header className={styles.heroBanner}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
+      title={`${siteConfig.title}`}
+      description='Description will go into a meta tag in <head />'>
+      <header className={clsx('hero', styles.heroBanner)}>
+        <div className={styles.bannerLeft}>
+          <h1 className='hero__title'>{siteConfig.title}</h1>
+          <p className={clsx('hero__subtitle', styles.bannerLeftP)}>
+            {siteConfig.tagline}
+            <ItypedLine strs={pageConfig.bannerTagLines}></ItypedLine>
+          </p>
+          <div className={styles.buttonWrapper}>
+            {pageConfig.bannerButtons.map(({bannerTitle, bannerUrl, className}) => (
+              <div className={clsx(styles.buttons, className)}>
+                <Link
+                  className={clsx(
+                    'button--lg',
+                    styles.bannerButtonLeft,
+                  )}
+                  to={useBaseUrl(bannerUrl)}>
+                  {bannerTitle}
+                </Link>
+              </div>
+            ))}
+
           </div>
         </div>
+        <div className={styles.bannerRight}>
+          <img className={pageConfig.bannerImg.className} src={pageConfig.bannerImg.url}
+               alt={pageConfig.bannerImg.bannerImgAlt} />
+        </div>
       </header>
+
+      <div className={clsx(styles.bannerTriangle)}></div>
       <main>
-        {features && features.length > 0 && (
+        {pageConfig.features && pageConfig.features.length > 0 && (
           <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map(({title, imageUrl, description}) => (
+            <div className='container'>
+              <div className='row'>
+                {pageConfig.features.map(({title, imageUrl, description}) => (
                   <Feature
                     key={title}
                     title={title}
